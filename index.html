@@ -4,62 +4,225 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SMILES NEST｜姿勢改善ピラティス</title>
+  <meta name="description" content="兵庫県西宮市甲子園町周辺で、姿勢改善のためのピラティス。LINEでお問い合わせください。" />
+
   <style>
     :root{
-      --bg:#f7f7f4; --paper:#fff; --text:#222; --muted:#666;
-      --line:#06C755; --border:#e7e6e1; --shadow:0 10px 30px rgba(0,0,0,.08);
-      --radius:18px; --max:1040px;
+      --bg:#f7f7f4;
+      --paper:#ffffff;
+      --text:#222;
+      --muted:#666;
+      --line:#06C755;
+      --border:#e7e6e1;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --radius:18px;
+      --max:1040px;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;color:var(--text);background:var(--bg);line-height:1.8}
-    .topbar{background:rgba(255,255,255,.92);border-bottom:1px solid var(--border)}
-    .topbar-inner{max-width:var(--max);margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{font-family:ui-serif,"Times New Roman",serif;letter-spacing:.08em;font-size:22px}
-    .tagline{color:var(--muted);font-size:13px;text-align:right}
-    .container{max-width:var(--max);margin:0 auto;padding:18px}
-    .hero{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:#fff;border:1px solid var(--border)}
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.8;
+    }
+    a{ color:inherit; }
+
+    /* 上の帯 */
+    .topbar{
+      background: rgba(255,255,255,.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
+    }
+    .topbar-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      font-family: ui-serif, "Times New Roman", serif;
+      letter-spacing: .08em;
+      font-size: 22px;
+    }
+    .tagline{
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .container{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px;
+    }
+
+    /* ヒーロー */
+    .hero{
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: #fff;
+      border: 1px solid var(--border);
+    }
     .hero-bg{
-      min-height:340px;padding:44px 22px;display:grid;place-items:center;text-align:center;
+      min-height: 360px;
+      padding: 44px 22px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+
+      /* ★背景画像（ファイル名そのまま） */
       background:
-  linear-gradient(rgba(255,255,255,.78), rgba(255,255,255,.78)),
-  url("hero.jpg") center/cover no-repeat;
+        linear-gradient(rgba(255,255,255,.78), rgba(255,255,255,.78)),
+        url("画像_7659.jpeg") center/cover no-repeat;
     }
-    .hero h1{margin:0 0 8px;font-size:clamp(24px,3vw,34px);letter-spacing:.02em}
-    .hero p{margin:0 auto;max-width:780px;color:#333;font-size:15px}
-    .bullets{margin:18px auto 0;max-width:560px;text-align:left;display:grid;gap:6px;color:#333;font-size:15px}
-    .bullets span{display:flex;gap:10px;align-items:baseline}
-    .dot{width:8px;height:8px;border-radius:999px;background:#1d6b45;margin-top:9px;flex:0 0 auto;opacity:.8}
-    .cta-wrap{margin-top:18px;display:grid;justify-items:center;gap:8px}
-    .cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:999px;background:var(--line);color:#fff;text-decoration:none;font-weight:700;box-shadow:0 10px 20px rgba(6,199,85,.25);border:1px solid rgba(0,0,0,.06);min-width:260px}
-    .cta small{display:block;font-weight:500;opacity:.95;font-size:12px;line-height:1.2}
-    .cta-note{color:var(--muted);font-size:13px}
-    .grid{margin-top:18px;display:grid;gap:14px;grid-template-columns:repeat(12,1fr)}
-    .card{background:var(--paper);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 16px 14px}
-    .card h2{margin:0 0 10px;font-size:16px;display:flex;align-items:center;gap:10px}
-    .icon{width:26px;height:26px;border-radius:10px;display:grid;place-items:center;border:1px solid var(--border);background:#fbfbf8;font-size:15px}
-    .muted{color:var(--muted)}
+    .hero h1{
+      margin: 0 0 8px;
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: .02em;
+    }
+    .hero p{
+      margin: 0 auto;
+      max-width: 780px;
+      color: #333;
+      font-size: 15px;
+    }
+    .bullets{
+      margin: 18px auto 0;
+      max-width: 560px;
+      text-align: left;
+      display: grid;
+      gap: 6px;
+      color: #333;
+      font-size: 15px;
+    }
+    .bullets span{
+      display:flex;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .dot{
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #1d6b45;
+      margin-top: 9px;
+      flex: 0 0 auto;
+      opacity: .8;
+    }
+
+    /* LINEボタン */
+    .cta-wrap{
+      margin-top: 18px;
+      display: grid;
+      justify-items: center;
+      gap: 8px;
+    }
+    .cta{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      background: var(--line);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 10px 20px rgba(6,199,85,.25);
+      border: 1px solid rgba(0,0,0,.06);
+      min-width: 260px;
+    }
+    .cta small{
+      display:block;
+      font-weight: 500;
+      opacity: .95;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+    .cta-note{
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* カード */
+    .grid{
+      margin-top: 18px;
+      display: grid;
+      gap: 14px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .card{
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px 16px 14px;
+    }
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      display:flex;
+      align-items:center;
+      gap: 10px;
+    }
+    .icon{
+      width: 26px;
+      height: 26px;
+      border-radius: 10px;
+      display:grid;
+      place-items:center;
+      border: 1px solid var(--border);
+      background: #fbfbf8;
+      font-size: 15px;
+    }
+    .muted{ color: var(--muted); }
+
+    .profile,.lesson,.price,.access,.contact,.faq{ grid-column: span 4; }
+
+    .card p{ margin: 0 0 10px; font-size: 14px; }
+    .card ul{ margin: 0; padding-left: 18px; font-size: 14px; }
+    .card li{ margin: 6px 0; }
+
+    .hr{
+      height: 1px;
+      background: var(--border);
+      margin: 10px 0;
+    }
+
+    /* ★プロフィール写真（ファイル名そのまま） */
     .avatar{
-  width:100%;
-  border-radius:14px;
-  border:1px solid var(--border);
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  background:#f1f1ed;
-  margin-bottom:10px;
-}
-    .profile,.lesson,.price,.access,.contact,.faq{grid-column:span 4}
-    .card p{margin:0 0 10px;font-size:14px}
-    .card ul{margin:0;padding-left:18px;font-size:14px}
-    .card li{margin:6px 0}
-    .hr{height:1px;background:var(--border);margin:10px 0}
-    @media (max-width:880px){
-      .tagline{display:none}
-      .profile,.lesson,.price,.access,.contact,.faq{grid-column:span 12}
-      .hero-bg{min-height:360px;padding:34px 18px}
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #f1f1ed;
+      margin-bottom: 10px;
+      display:block;
     }
-    footer{color:var(--muted);text-align:center;padding:22px 18px 30px;font-size:12px}
+
+    /* スマホ */
+    @media (max-width: 880px){
+      .tagline{ display:none; }
+      .profile,.lesson,.price,.access,.contact,.faq{ grid-column: span 12; }
+      .hero-bg{ min-height: 380px; padding: 34px 18px; }
+    }
+
+    footer{
+      color: var(--muted);
+      text-align:center;
+      padding: 22px 18px 30px;
+      font-size: 12px;
+    }
   </style>
 </head>
+
 <body>
   <div class="topbar">
     <div class="topbar-inner">
@@ -73,8 +236,10 @@
       <div class="hero-bg">
         <div>
           <h1>姿勢が変わると、毎日が楽になります。</h1>
-          <p>西宮・甲子園町で、姿勢改善のためのピラティスを。<br>
-          「きれいに立てる」「疲れにくい」「動きやすい」体づくりを、丁寧にサポートします。</p>
+          <p>
+            西宮・甲子園町で、姿勢改善のためのピラティスを。<br>
+            「きれいに立てる」「疲れにくい」「動きやすい」体づくりを、丁寧にサポートします。
+          </p>
 
           <div class="bullets">
             <span><i class="dot"></i>姿勢を整えたい女性</span>
@@ -83,6 +248,7 @@
           </div>
 
           <div class="cta-wrap">
+            <!-- ★LINEはダミーのまま（あとでURL差し替えOK） -->
             <a class="cta" href="https://example.com/your-line-url" target="_blank" rel="noopener">
               LINEでお問い合わせ
               <small>空き状況の確認だけでも大丈夫です</small>
@@ -96,12 +262,17 @@
     <section class="grid">
       <section class="card profile">
         <h2><span class="icon">👤</span>プロフィール</h2>
-        <img class="avatar" src="profile.jpg" alt="小野博美のプロフィール写真">
+
+        <img class="avatar" src="画像_7616.jpeg" alt="小野博美のプロフィール写真">
+
         <div class="hr"></div>
         <p><b>ピラティスインストラクターの小野博美です。</b><br>
-        兵庫県西宮市甲子園町を拠点に、姿勢改善を目的としたマンツーマンレッスンを行っています。</p>
-        <p class="muted">体は「がんばる」よりも「整える」ことで変わっていきます。<br>
-        その日の体調や癖に合わせて、無理のない進め方を大切にしています。</p>
+          兵庫県西宮市甲子園町を拠点に、姿勢改善を目的としたマンツーマンレッスンを行っています。
+        </p>
+        <p class="muted">
+          体は「がんばる」よりも「整える」ことで変わっていきます。<br>
+          その日の体調や癖に合わせて、無理のない進め方を大切にしています。
+        </p>
       </section>
 
       <section class="card lesson">
@@ -116,8 +287,10 @@
 
       <section class="card price">
         <h2><span class="icon">¥</span>料金</h2>
-        <p>料金は、レッスン内容と回数によりご案内しています。<br>
-        ご希望に合わせて、無理のないプランをご提案します。</p>
+        <p>
+          料金は、レッスン内容と回数によりご案内しています。<br>
+          ご希望に合わせて、無理のないプランをご提案します。
+        </p>
         <div class="hr"></div>
         <ul>
           <li>体験レッスン：¥（後で入力）／（時間：○○分）</li>
@@ -130,13 +303,18 @@
       <section class="card access">
         <h2><span class="icon">📍</span>アクセス</h2>
         <p><b>兵庫県西宮市 甲子園町周辺</b></p>
-        <p class="muted">場所の詳細は、プライバシーに配慮し<br>
-        <b>ご予約確定後に個別でご案内</b>いたします。</p>
+        <p class="muted">
+          場所の詳細は、プライバシーに配慮し<br>
+          <b>ご予約確定後に個別でご案内</b>いたします。
+        </p>
       </section>
 
       <section class="card contact">
         <h2><span class="icon">💬</span>お問い合わせ</h2>
-        <p>LINEからご連絡ください。<br>次の3点を送っていただくと、やり取りがスムーズです。</p>
+        <p>
+          LINEからご連絡ください。<br>
+          次の3点を送っていただくと、やり取りがスムーズです。
+        </p>
         <ul>
           <li>① お名前</li>
           <li>② 目的（例：姿勢改善／運動不足解消／肩こり など）</li>
@@ -148,11 +326,18 @@
 
       <section class="card faq">
         <h2><span class="icon">❓</span>FAQ</h2>
-        <p><b>Q. 初めてでも大丈夫ですか？</b><br>はい。体の状態を確認しながら、わかりやすく進めます。</p>
-        <p><b>Q. シニアでも参加できますか？</b><br>はい。負担の少ない動きで、体力に合わせて行います。</p>
+        <p><b>Q. 初めてでも大丈夫ですか？</b><br>
+          はい。体の状態を確認しながら、わかりやすく進めます。
+        </p>
+        <p><b>Q. シニアでも参加できますか？</b><br>
+          はい。負担の少ない動きで、体力に合わせて行います。
+        </p>
         <p><b>Q. 肩や腰に痛みがあるのですが…</b><br>
-        安全を最優先に進めます。まずは状況をLINEでお知らせください。必要に応じて医療機関の受診をおすすめすることもあります。</p>
-        <p><b>Q. 何を持って行けばいいですか？</b><br>動きやすい服装と飲み物をご用意ください。</p>
+          安全を最優先に進めます。まずは状況をLINEでお知らせください。必要に応じて医療機関の受診をおすすめすることもあります。
+        </p>
+        <p><b>Q. 何を持って行けばいいですか？</b><br>
+          動きやすい服装と飲み物をご用意ください。
+        </p>
       </section>
     </section>
 
