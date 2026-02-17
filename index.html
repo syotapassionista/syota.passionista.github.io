@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SMILES NEST｜姿勢改善ピラティス</title>
-  <meta name="description" content="兵庫県西宮市甲子園町周辺で、姿勢改善のためのピラティス。LINEでお問い合わせください。" />
+  <meta name="description" content="リフォーマーなどのイクイップメントを使用し、身体に負担なく行える姿勢改善ピラティス。兵庫県西宮市甲子園町周辺。" />
 
   <style>
     :root{
@@ -26,7 +26,7 @@
       background:var(--bg);
       line-height:1.8;
     }
-    a{ color:inherit; }
+    a{ color:inherit; text-decoration:none; }
 
     /* 上の帯 */
     .topbar{
@@ -70,13 +70,13 @@
       border: 1px solid var(--border);
     }
     .hero-bg{
-      min-height: 360px;
+      min-height: 380px;
       padding: 44px 22px;
       display: grid;
       place-items: center;
       text-align: center;
 
-      /* ★背景画像（ファイル名に合わせた） */
+      /* 背景画像 */
       background:
         linear-gradient(rgba(255,255,255,.78), rgba(255,255,255,.78)),
         url("IMG_7659.jpeg") center/cover no-repeat;
@@ -88,35 +88,13 @@
     }
     .hero p{
       margin: 0 auto;
-      max-width: 780px;
+      max-width: 860px;
       color: #333;
       font-size: 15px;
-    }
-    .bullets{
-      margin: 18px auto 0;
-      max-width: 560px;
       text-align: left;
-      display: grid;
-      gap: 6px;
-      color: #333;
-      font-size: 15px;
-    }
-    .bullets span{
-      display:flex;
-      gap: 10px;
-      align-items: baseline;
-    }
-    .dot{
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #1d6b45;
-      margin-top: 9px;
-      flex: 0 0 auto;
-      opacity: .8;
     }
 
-    /* LINEボタン */
+    /* ボタン */
     .cta-wrap{
       margin-top: 18px;
       display: grid;
@@ -132,7 +110,6 @@
       border-radius: 999px;
       background: var(--line);
       color: #fff;
-      text-decoration: none;
       font-weight: 700;
       box-shadow: 0 10px 20px rgba(6,199,85,.25);
       border: 1px solid rgba(0,0,0,.06);
@@ -148,6 +125,8 @@
     .cta-note{
       color: var(--muted);
       font-size: 13px;
+      text-align:center;
+      max-width: 540px;
     }
 
     /* カード */
@@ -195,7 +174,7 @@
       margin: 10px 0;
     }
 
-    /* ★プロフィール写真（ファイル名に合わせた） */
+    /* プロフィール写真 */
     .avatar{
       width: 100%;
       border-radius: 14px;
@@ -207,11 +186,55 @@
       display:block;
     }
 
+    /* 料金（読みやすく） */
+    .price-block{ margin: 10px 0 0; }
+    .price-block h3{
+      margin: 12px 0 6px;
+      font-size: 14px;
+    }
+    .price-table{
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .price-table td{
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .price-table td:first-child{
+      color: var(--muted);
+      padding-right: 10px;
+      width: 52%;
+    }
+    .note{
+      margin-top: 10px;
+      padding: 10px 12px;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      background: #fbfbf8;
+      font-size: 13px;
+      color: #333;
+    }
+
+    /* LINE QR */
+    .line-qr{
+      width: 180px;
+      max-width: 70%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #fff;
+      display:block;
+      margin: 10px auto 0;
+    }
+
     /* スマホ */
     @media (max-width: 880px){
       .tagline{ display:none; }
       .profile,.lesson,.price,.access,.contact,.faq{ grid-column: span 12; }
-      .hero-bg{ min-height: 380px; padding: 34px 18px; }
+      .hero-bg{ min-height: 420px; padding: 34px 18px; }
+      .hero p{ text-align: left; }
     }
 
     footer{
@@ -235,25 +258,21 @@
     <section class="hero">
       <div class="hero-bg">
         <div>
-          <h1>姿勢が変わると、毎日が楽になります。</h1>
+          <h1>SMILES NEST</h1>
+
+          <!-- トップのメッセージ -->
           <p>
-            西宮・甲子園町で、姿勢改善のためのピラティスを。<br>
-            「きれいに立てる」「疲れにくい」「動きやすい」体づくりを、丁寧にサポートします。
+            SMILES NESTではリフォーマーをはじめ様々なイクイップメントを使用し身体に負担なくピラティスエクササイズを行う事が出来ます。<br>
+            姿勢を改善し正しい身体の使い方に気づく事ができる運動法『ピラティス』を生活の一部に取り入れて見ませんか？
           </p>
 
-          <div class="bullets">
-            <span><i class="dot"></i>姿勢を整えたい女性</span>
-            <span><i class="dot"></i>健康づくりを始めたいシニアの方</span>
-            <span><i class="dot"></i>肩こり・腰の不調を予防したい方</span>
-          </div>
-
           <div class="cta-wrap">
-            <!-- ★LINEはダミー（あとで差し替え） -->
-            <a class="cta" href="https://example.com/your-line-url" target="_blank" rel="noopener">
+            <!-- ★ここが本番LINEリンク（反映済み） -->
+            <a class="cta" href="https://lin.ee/RJVqFMC" target="_blank" rel="noopener">
               LINEでお問い合わせ
               <small>空き状況の確認だけでも大丈夫です</small>
             </a>
-            <div class="cta-note">※ご質問・ご予約はLINEから受け付けています</div>
+            <div class="cta-note">※タップでLINEを開けます。うまく開かない場合は、下のQRコードからも友だち追加できます。</div>
           </div>
         </div>
       </div>
@@ -262,7 +281,6 @@
     <section class="grid">
       <section class="card profile">
         <h2><span class="icon">👤</span>プロフィール</h2>
-
         <img class="avatar" src="IMG_7616.jpeg" alt="小野博美のプロフィール写真">
 
         <div class="hr"></div>
@@ -277,27 +295,49 @@
 
       <section class="card lesson">
         <h2><span class="icon">🧘</span>レッスン</h2>
-        <p><b>姿勢改善のための対面レッスン</b></p>
+        <p><b>イクイップメントを活用したピラティス（対面）</b></p>
         <ul>
-          <li>呼吸・背骨・骨盤・肩まわりを丁寧に確認します</li>
-          <li>日常の「立つ・座る・歩く」を楽にすることを目指します</li>
-          <li>負担の少ない動きで、安心して続けられます</li>
+          <li>身体に負担の少ない動きで、姿勢と体の使い方を整えます</li>
+          <li>目的・体調に合わせて内容を調整します</li>
+          <li>はじめての方も安心して続けられるペースで進めます</li>
         </ul>
       </section>
 
       <section class="card price">
         <h2><span class="icon">¥</span>料金</h2>
-        <p>
-          料金は、レッスン内容と回数によりご案内しています。<br>
-          ご希望に合わせて、無理のないプランをご提案します。
-        </p>
-        <div class="hr"></div>
-        <ul>
-          <li>体験レッスン：¥（後で入力）／（時間：○○分）</li>
-          <li>単発レッスン：¥（後で入力）／（時間：○○分）</li>
-          <li>月○回プラン：¥（後で入力）</li>
-          <li>お支払い方法：現金／（他があれば追記）</li>
-        </ul>
+
+        <div class="price-block">
+          <h3>【パーソナル　50分】</h3>
+          <table class="price-table">
+            <tr><td>基本料金</td><td>7,700円(税込)</td></tr>
+            <tr><td>延長料金</td><td>10分/1,100円(税込)</td></tr>
+            <tr><td>月2回コース</td><td>14,960円(税込)</td></tr>
+            <tr><td>月4回コース</td><td>28,600円(税込)</td></tr>
+            <tr><td>追加料金</td><td>1回/7,150円(税込)</td></tr>
+          </table>
+
+          <p style="margin-top:10px;"><b>スマイル会員：52,800円(税込)</b>　⭐1ヶ月8回までご予約可能。</p>
+        </div>
+
+        <div class="price-block">
+          <h3>【ペアセッション】</h3>
+          <table class="price-table">
+            <tr><td>50分</td><td>9,900円(税込)</td></tr>
+            <tr><td>延長料金</td><td>10分/1,100円(税込)</td></tr>
+          </table>
+        </div>
+
+        <div class="price-block">
+          <h3>【体験・初回料金】</h3>
+          <table class="price-table">
+            <tr><td>50分</td><td>3,850円(税込)</td></tr>
+          </table>
+        </div>
+
+        <div class="note">
+          ⭐コースでご利用の場合は月初ご利用時に一括でお支払いいただきます。お休み分の振替は翌月10日までにご予約ください。入金後キャンセルされた場合の返金はお断りさせていただきます。ご了承ください。<br><br>
+          ⭐50分以上のセッションをご希望の方はご予約時にお申し出ください。よろしくお願いいたします。
+        </div>
       </section>
 
       <section class="card access">
@@ -309,19 +349,24 @@
         </p>
       </section>
 
-      <section class="card contact">
-        <h2><span class="icon">💬</span>お問い合わせ</h2>
+      <section class="card contact" id="line">
+        <h2><span class="icon">💬</span>お問い合わせ（LINE）</h2>
         <p>
           LINEからご連絡ください。<br>
           次の3点を送っていただくと、やり取りがスムーズです。
         </p>
         <ul>
           <li>① お名前</li>
-          <li>② 目的（例：姿勢改善／運動不足解消／肩こり など）</li>
+          <li>② 目的（例：姿勢改善／健康づくり／肩こり など）</li>
           <li>③ ご希望日時（第1希望〜第3希望）</li>
         </ul>
+
         <div class="hr"></div>
-        <p class="muted">不安な点があれば、文章がまとまっていなくても大丈夫です。</p>
+        <p class="muted">下のQRコードを読み取って、友だち追加をお願いします。</p>
+
+        <img class="line-qr"
+             src="https://qr-official.line.me/gs/M_553azgch_GW.png?oat_content=qr"
+             alt="LINE公式アカウントQRコード">
       </section>
 
       <section class="card faq">
@@ -333,7 +378,7 @@
           はい。負担の少ない動きで、体力に合わせて行います。
         </p>
         <p><b>Q. 肩や腰に痛みがあるのですが…</b><br>
-          安全を最優先に進めます。まずは状況をLINEでお知らせください。必要に応じて医療機関の受診をおすすめすることもあります。
+          安全を最優先に進めます。まずは状況をLINEでお知らせください。
         </p>
         <p><b>Q. 何を持って行けばいいですか？</b><br>
           動きやすい服装と飲み物をご用意ください。
